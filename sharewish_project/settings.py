@@ -13,7 +13,7 @@ SECRET_KEY = 'django-insecure-dkni$e76p#jkr@tp-7yidu6(ylgaa1*ir_8ts45j65bat&!t5c
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["3.83.23.135", "localhost", "127.0.0.1"]
 
 
 # Application definition
@@ -44,7 +44,7 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'sharewish_project.urls'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",
+    "http://3.83.23.135",
 ]
 
 TEMPLATES = [
