@@ -4,4 +4,4 @@ from .models import SharewishEntry
 class SharewishEntrySerializer(serializers.ModelSerializer):
     class Meta:
         model = SharewishEntry
-        fields = ['name', 'message']
+        fields = '__all__'

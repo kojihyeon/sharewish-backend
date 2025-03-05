@@ -16,3 +16,12 @@ def create_sharewish_entry(request):
         
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    
+@api_view(['GET'])
+def get_sharewish_entries(request):
+    try:
+        entries = SharewishEntry.objects.all().order_by('-created_at')  # 최신순 정렬
+        serializer = SharewishEntrySerializer(entries, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
